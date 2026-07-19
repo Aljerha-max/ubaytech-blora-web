@@ -1,0 +1,32 @@
+{
+  "toko": {
+    "nama": "UBAYTECH BLORA",
+    "alamat": "Jl. Pemuda No.45, Blora Kota, Jawa Tengah 58211",
+    "wa": "6285225867000",
+    "ig": "https://instagram.com/ubaytech_blora",
+    "slogan": "Sparepart Terlengkap, Harga Teknisi, Garansi 3 Bulan"
+  },
+  "products": [
+    {
+      "id": 1,
+      "n": "LCD iPhone 11 Original",
+      "h": 450000,
+      "s": 12,
+      "k": "LCD"
+    },
+    {
+      "id": 2,
+      "n": "Baterai Samsung A12",
+      "h": 85000,
+      "s": 3,
+      "k": "Baterai"
+    },
+    {
+      "id": 3,
+      "n": "Konektor Cas Type-C",
+      "h": 15000,
+      "s": 45,
+      "k": "Konektor"
+    }
+  ]
+}
