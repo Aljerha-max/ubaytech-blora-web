@@ -1,0 +1,16 @@
+// Paste di extensions > Apps Script di Google Sheet
+function doPost(e){
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  try{
+    const data = JSON.parse(e.postData.contents);
+    sheet.appendRow([new Date(), data.n, data.h, data.s, data.k, data.id, JSON.stringify(data)]);
+    return ContentService.createTextOutput(JSON.stringify({ok:true})).setMimeType(ContentService.MimeType.JSON);
+  }catch(err){
+    return ContentService.createTextOutput(JSON.stringify({ok:false,error:err.message})).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+function doGet(){
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const values = sheet.getDataRange().getValues();
+  return ContentService.createTextOutput(JSON.stringify(values)).setMimeType(ContentService.MimeType.JSON);
+}
